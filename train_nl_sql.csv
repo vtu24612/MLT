@@ -1,0 +1,14 @@
+nl,sql,slots
+how many games are there,SELECT COUNT(*) FROM steam_games;,
+show me games made by Valve,SELECT * FROM steam_games WHERE developer LIKE '%developer%';,developer
+what are the top 5 most expensive games,SELECT * FROM steam_games ORDER BY price DESC LIMIT 5;,
+list all games released after 2018,SELECT * FROM steam_games WHERE release_date > 'year-12-31';,year
+find all action games,SELECT * FROM steam_games WHERE genres LIKE '%genre%';,genre
+which games have the most positive ratings,SELECT * FROM steam_games ORDER BY positive_ratings DESC LIMIT 10;,
+show me all the free to play games,SELECT * FROM steam_games WHERE price = 0;,
+list all single player games,SELECT * FROM steam_games WHERE categories LIKE '%mode%';,mode
+list total price of all games,SELECT SUM(price) FROM steam_games;,
+games developed by Gearbox Software,SELECT * FROM steam_games WHERE developer LIKE '%developer%';,developer
+games released after 2020,SELECT * FROM steam_games WHERE release_date > 'year-12-31';,year
+find all adventure games,SELECT * FROM steam_games WHERE genres LIKE '%genre%';,genre
+list multiplayer games,SELECT * FROM steam_games WHERE categories LIKE '%mode%';,mode
